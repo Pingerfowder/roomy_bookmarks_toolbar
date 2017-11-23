@@ -1,0 +1,17 @@
+﻿@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@-moz-document url(chrome://browser/content/browser.xul), url(chrome://navigator/content/navigator.xul) {
+	#personal-bookmarks .bookmarks-toolbar-items, #PlacesToolbarItems {
+		-moz-box-pack: center !important;
+		display:-moz-box !important;
+	}
+	#personal-bookmarks #PlacesToolbar #PlacesToolbarItems>box {
+		display:-moz-box !important;
+	}
+	#personal-bookmarks {
+		display:-moz-box !important;
+	}
+	#PlacesToolbar {
+		display:-moz-box !important;
+	}
+}

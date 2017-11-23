@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<dialog id="roomybookmarkstoolbarGetSupport" title="Roomy Bookmarks Toolbar Support"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		onload="roomybookmarkstoolbarOptions.data();">
+		<script src="options.js" />
+	<vbox>
+		<description>If you has some problem try:</description>
+		<description>1) Change some setting.</description>
+		<description>2) Restart browser.</description>
+		<description>If it don't help - send description of your problem and technical information to developer email.</description>
+		<description>Wait some days answer by developer.</description> 
+		<label control="email" value="Developer email:"/>
+		<textbox id="email" value="rbtaddon@gmail.com" readonly="true"/>
+		<label control="info" value="Technical data(select all text(Ctrl+A) and copy(Ctrl+C)). This text hasn't personal information:"/>
+		<textbox id="info" value="" readonly="true" multiline="true" newlines="pasteintact" clickSelectsAll="true" rows="20"/>
+	</vbox>
+</dialog>

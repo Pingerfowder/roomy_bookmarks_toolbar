@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://roomybookmarkstoolbar/locale/options.dtd">
+
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+				id="roomybookmarkstoolbarPreferences"
+				title="&roomybookmarkstoolbar.options.window.title;"
+				onload="roomybookmarkstoolbarOptions.onLoad();">
+ <prefpane id="roomybookmarkstoolbarPreferencesSave" label="&roomybookmarkstoolbar.options.window.title;">
+  <preferences>
+		<preference id="mousehover" name="extensions.roomybookmarkstoolbar.mousehover" type="bool" instantApply="true"/>
+		<preference id="hideFoldersNames" name="extensions.roomybookmarkstoolbar.hideFoldersNames" type="bool" instantApply="true"/>
+		<preference id="hideNoFaviconNames" name="extensions.roomybookmarkstoolbar.hideNoFaviconNames" type="bool" instantApply="true"/>
+		<preference id="spacing" name="extensions.roomybookmarkstoolbar.spacing" type="int" instantApply="true"/>
+		<preference id="rows" name="extensions.roomybookmarkstoolbar.rows" type="int" instantApply="true"/>
+		<preference id="iconSize" name="extensions.roomybookmarkstoolbar.iconSize" type="int" instantApply="true"/>
+		<preference id="autoHideBarTime" name="extensions.roomybookmarkstoolbar.autoHideBarTime" type="int" instantApply="true"/>
+		<preference id="opacityTime" name="extensions.roomybookmarkstoolbar.opacityTime" type="int" instantApply="true"/>
+		<preference id="opacityTimeLong" name="extensions.roomybookmarkstoolbar.opacityTimeLong" type="int" instantApply="true"/>
+		<preference id="location" name="extensions.roomybookmarkstoolbar.location" type="int" instantApply="true"/>
+		<preference id="autoHideBar" name="extensions.roomybookmarkstoolbar.autoHideBar" type="bool" instantApply="true"/>
+		<preference id="opacity" name="extensions.roomybookmarkstoolbar.opacity" type="bool" instantApply="true"/>
+		<preference id="multirowBar" name="extensions.roomybookmarkstoolbar.multirowBar" type="bool" instantApply="true"/>
+		<preference id="hideBookmarksName" name="extensions.roomybookmarkstoolbar.hideBookmarksName" type="bool" instantApply="true"/>
+		<preference id="bookmarksAboveTab" name="extensions.roomybookmarkstoolbar.bookmarksAboveTab" type="bool" instantApply="true"/>
+		<preference id="hideFolderIcons" name="extensions.roomybookmarkstoolbar.hideFolderIcons" type="bool" instantApply="true"/>
+		<preference id="hideBookmarksIcons" name="extensions.roomybookmarkstoolbar.hideBookmarksIcons" type="bool" instantApply="true"/>
+		<preference id="hideDefaultIcons" name="extensions.roomybookmarkstoolbar.hideDefaultIcons" type="bool" instantApply="true"/>
+		<preference id="fixedHeight" name="extensions.roomybookmarkstoolbar.fixedHeight" type="bool" instantApply="true"/>
+		<preference id="heightFix" name="extensions.roomybookmarkstoolbar.heightFix" type="bool" instantApply="true"/>
+		<preference id="hideNotification" name="extensions.roomybookmarkstoolbar.hideNotification" type="bool" instantApply="true"/>
+		<preference id="overPage" name="extensions.roomybookmarkstoolbar.overPage" type="bool" instantApply="true"/>
+		<preference id="folderMargin" name="extensions.roomybookmarkstoolbar.folderMargin" type="int" instantApply="true"/>
+		<preference id="disableLinuxFix" name="extensions.roomybookmarkstoolbar.disableLinuxFix" type="bool" instantApply="true"/>
+		<preference id="folderArrow" name="extensions.roomybookmarkstoolbar.folderArrow" type="bool" instantApply="true"/>
+		<preference id="userWidthEnabled" name="extensions.roomybookmarkstoolbar.userWidthEnabled" type="bool" instantApply="true"/>
+		<preference id="userWidth" name="extensions.roomybookmarkstoolbar.userWidth" type="int" instantApply="true"/>
+  		<preference id="hideByDefault" name="extensions.roomybookmarkstoolbar.hideByDefault" type="bool" instantApply="true"/>
+  		<preference id="BBonNewTab" name="extensions.roomybookmarkstoolbar.BBonNewTab" type="bool" instantApply="true"/>
+  		<preference id="autoHideZoneAll" name="extensions.roomybookmarkstoolbar.autoHideZoneAll" type="bool" instantApply="true"/>
+  		<preference id="autoHideZoneTab" name="extensions.roomybookmarkstoolbar.autoHideZoneTab" type="bool" instantApply="true"/>
+  		<preference id="autoHideZoneNav" name="extensions.roomybookmarkstoolbar.autoHideZoneNav" type="bool" instantApply="true"/>
+  		<preference id="autoHideZoneMenu" name="extensions.roomybookmarkstoolbar.autoHideZoneMenu" type="bool" instantApply="true"/>
+  		<preference id="autoHideZoneButton" name="extensions.roomybookmarkstoolbar.autoHideZoneButton" type="bool" instantApply="true"/>
+  		<preference id="autoHideZoneBackButton" name="extensions.roomybookmarkstoolbar.autoHideZoneBackButton" type="bool" instantApply="true"/>
+  		<preference id="autoHideZoneMenuButton" name="extensions.roomybookmarkstoolbar.autoHideZoneMenuButton" type="bool" instantApply="true"/>
+  		<preference id="textSizeEnable" name="extensions.roomybookmarkstoolbar.textSizeEnable" type="bool" instantApply="true"/>
+  		<preference id="textSize" name="extensions.roomybookmarkstoolbar.textSize" type="int" instantApply="true"/>
+
+ </preferences>
+		<script src="options.js" />
+		<script src="overlay.js" />
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="roomybookmarkstoolbar-strings"
+			src="chrome://roomybookmarkstoolbar/locale/roomybookmarkstoolbar.properties" />
+	</stringbundleset>
+
+	<tabbox id="roomybookmarkstoolbarTabBox" flex="1">
+		<tabs id="roomybookmarkstoolbar.options.tabs">
+			<tab id="roomybookmarkstoolbar.options.tab1" label="&roomybookmarkstoolbar.options.tab1.label;" />
+			<tab id="roomybookmarkstoolbar.options.tab2" label="&roomybookmarkstoolbar.options.tab2.label;" />
+			<tab id="roomybookmarkstoolbar.options.tab3" label="&roomybookmarkstoolbar.options.tab3.label;" />
+		</tabs>
+		<tabpanels>
+			<tabpanel id="roomybookmarkstoolbar.options.tab1" orient="vertical">
+				<groupbox>
+					<caption label="&roomybookmarkstoolbar.options.multirowBarGroup.label;"/>
+					<hbox align="center">
+						<checkbox preference="multirowBar" id="multirowBarPerf" label="&roomybookmarkstoolbar.options.multirowEnable.label;" oncommand="roomybookmarkstoolbarOptions.location()"/>
+						<caption label="&roomybookmarkstoolbar.options.opacityIn.label; " />
+						<textbox preference="rows" id="rowsPerf" min="1" size="2" type="number" disabled="false" />
+						<caption label="&roomybookmarkstoolbar.options.multirowRows.label;" />
+					</hbox>
+				<hbox align="center">
+					<checkbox preference="fixedHeight" id="fixedHeightPerf" label="&roomybookmarkstoolbar.options.multirowBarFixed.label;" oncommand="roomybookmarkstoolbarOptions.location()"/>
+					<checkbox preference="disableLinuxFix" id="disableLinuxFixPerf" label="&roomybookmarkstoolbar.options.linuxFix.label;" oncommand="roomybookmarkstoolbarOptions.OSFix();" disabled="true"/>
+				</hbox>
+				<checkbox preference="heightFix" id="heightFixPerf" label="&roomybookmarkstoolbar.options.fixIncorrectHeight.label;" oncommand="roomybookmarkstoolbarOptions.location()"/>
+				</groupbox>
+				<groupbox>
+					<caption label="&roomybookmarkstoolbar.options.timeGroup.label;" />
+					<hbox align="center"> <caption id="autoHideBarDisabled" /></hbox>
+					<hbox align="center">
+						<checkbox preference="autoHideBar" id="autoHideBarPerf" label="&roomybookmarkstoolbar.options.autohideBar.label;" oncommand="roomybookmarkstoolbarOptions.autoHideBar(); roomybookmarkstoolbarOptions.autoHideZone();" />
+						<textbox preference="autoHideBarTime" id="autoHideBarTimePerf" min="0" size="2" type="number" disabled="false" />
+						<caption label="&roomybookmarkstoolbar.options.seconds.label;" />
+					</hbox>
+					<groupbox>
+						<caption label="&roomybookmarkstoolbar.options.autoHideZone.label;" />
+						<hbox align="center" >
+							<checkbox preference="autoHideZoneAll" id="autoHideZoneAllPerf" label="&roomybookmarkstoolbar.options.autoHideZoneAll.label;" oncommand="roomybookmarkstoolbarOptions.autoHideZone()" />
+							<checkbox preference="autoHideZoneMenu" id="autoHideZoneMenuPerf" label="&roomybookmarkstoolbar.options.autoHideZoneMenu.label;" />
+							<checkbox preference="autoHideZoneTab" id="autoHideZoneTabPerf" label="&roomybookmarkstoolbar.options.autoHideZoneTab.label;" />
+							<checkbox preference="autoHideZoneNav" id="autoHideZoneNavPerf" label="&roomybookmarkstoolbar.options.autoHideZoneNav.label;" />
+						</hbox>
+		   			<checkbox preference="autoHideZoneButton" id="autoHideZoneButtonPerf" label="&roomybookmarkstoolbar.options.autoHideZoneButton.label;" />
+					<hbox align="center" >
+					      <checkbox preference="autoHideZoneBackButton" id="autoHideZoneBackButtonPerf" label="&roomybookmarkstoolbar.options.autoHideZoneBackButton.label;" />
+						  <checkbox preference="autoHideZoneMenuButton" id="autoHideZoneMenuButtonPerf" label="&roomybookmarkstoolbar.options.autoHideZoneMenuButton.label;" />
+					</hbox>
+					</groupbox>
+					<checkbox preference="hideByDefault" id="hideByDefaultPerf" label="&roomybookmarkstoolbar.options.hideByDefault.label;" oncommand="roomybookmarkstoolbarOptions.autoHideBar()"/>
+					<checkbox preference="BBonNewTab" id="BBonNewTabPerf" label="&roomybookmarkstoolbar.options.BBonNewTab.label;" oncommand="roomybookmarkstoolbarOptions.autoHideBar()" />
+				</groupbox>
+				<groupbox>
+					<hbox align="center">
+						<checkbox preference="opacity" id="opacityPerf" label="&roomybookmarkstoolbar.options.opacity.label;" oncommand="roomybookmarkstoolbarOptions.autoHideBar()" />
+						<textbox preference="opacityTime" id="opacityTimePerf" min="0" size="1" type="number" disabled="false" />
+						<caption label="&roomybookmarkstoolbar.options.seconds.label;" />
+						<caption label="&roomybookmarkstoolbar.options.opacityIn.label; " />
+						<textbox preference="opacityTimeLong" id="opacityTimeLongPerf" min="0" size="1" type="number" disabled="false" />
+						<caption label="&roomybookmarkstoolbar.options.seconds.label;" />
+					</hbox>
+				</groupbox>
+				<groupbox>
+					<caption label="&roomybookmarkstoolbar.options.location.label;"/>
+					<checkbox preference="bookmarksAboveTab" id="bookmarksAboveTabPerf" label="&roomybookmarkstoolbar.options.bookmarksAboveTab.label;" disabled="false" oncommand="roomybookmarkstoolbarOptions.topOnPage()" />
+					<checkbox preference="overPage" id="overPagePerf" label="&roomybookmarkstoolbar.options.overPage.label;" disabled="false" oncommand="roomybookmarkstoolbarOptions.topOnPage()" />
+				</groupbox>
+				<groupbox>
+					<caption label="&roomybookmarkstoolbar.options.alignment.label;" />
+					<radiogroup preference="location" id="locationPerf" orient="horizontal" disabled="false">
+						<radio id="location0" value="0" label="&roomybookmarkstoolbar.options.alignment0.label;" />
+						<radio id="location1" value="1" label="&roomybookmarkstoolbar.options.alignment1.label;" />
+						<radio id="location2" value="2" label="&roomybookmarkstoolbar.options.alignment2.label;" />
+					</radiogroup>
+				</groupbox>
+			</tabpanel>
+			<tabpanel id="roomybookmarkstoolbar.options.tab2" orient="vertical">
+				<label value="Now you can set color for bookmarks text/background" style='font-size:12pt; color:#990000'/>
+				<label value="To do this: open '&roomybookmarkstoolbar.options.rbtChangeColor.label;' in bookmark right-click menu." style='font-size:10pt'/>
+				<groupbox>
+					<caption label="&roomybookmarkstoolbar.options.BookmarksLabelGroup.label;" />
+					<checkbox preference="hideBookmarksName" id="hideBookmarksNamePerf" label="&roomybookmarkstoolbar.options.hideBookmarksName.label;" oncommand="roomybookmarkstoolbarOptions.showName()" />
+					<checkbox preference="hideFoldersNames" id="hideFoldersNamesPerf" label="&roomybookmarkstoolbar.options.hideFoldersNames.label;" disabled="false" oncommand="roomybookmarkstoolbarOptions.showName();" />
+					<checkbox preference="hideNoFaviconNames" id="hideNoFaviconNamesPerf" label="&roomybookmarkstoolbar.options.hideNoFaviconNames.label;" disabled="false" oncommand="roomybookmarkstoolbarOptions.showName();" />
+				</groupbox>
+				<checkbox preference="mousehover" id="mousehoverPerf" label="&roomybookmarkstoolbar.options.onHover.label;" disabled="false" oncommand="roomybookmarkstoolbarOptions.showName();" />
+				<groupbox>
+					<checkbox preference="userWidthEnabled" id="userWidthEnabledPerf" label="&roomybookmarkstoolbar.options.userWidthEnabled.label;" oncommand="roomybookmarkstoolbarOptions.userWidth()"/>
+					<hbox align="center">
+						<caption label="&roomybookmarkstoolbar.options.userWidthMaxWidth.label;" />
+						<textbox preference="userWidth" id="userWidthPerf" min="0" size="3" type="number" disabled="false" />
+						<caption label="&roomybookmarkstoolbar.options.pixels.label;" />
+					</hbox>
+				</groupbox>
+				<groupbox>
+					<hbox align="center">
+							<caption label="&roomybookmarkstoolbar.options.textSize.label;" />
+							<textbox preference="textSize" id="textSizePerf" min="0" max="1000" size="3" type="number"/>
+							<caption label="%" />
+					</hbox>
+				</groupbox>
+				<groupbox>
+					 <hbox align="center">
+							 <caption label="&roomybookmarkstoolbar.options.folderMargin.label;" />
+							 <textbox preference="folderMargin" id="folderMarginPerf" min="0" max="10" size="3" type="number"/>
+							 <caption label="&roomybookmarkstoolbar.options.pixels.label;" />
+					 </hbox>
+				</groupbox>
+			</tabpanel>
+			<tabpanel id="roomybookmarkstoolbar.options.tab3" orient="vertical">
+				<label value="Now you can set color for bookmarks text/background" style='font-size:12pt; color:#990000'/>
+				<label value="To do this: open '&roomybookmarkstoolbar.options.rbtChangeColor.label;' in bookmark right-click menu." style='font-size:10pt'/>
+				<groupbox>
+					<hbox align="center">
+						<caption label="&roomybookmarkstoolbar.options.sizeGroup.label;" />
+						<textbox preference="iconSize" min="1" size="2" type="number" />
+						<caption label="&roomybookmarkstoolbar.options.pixels.label;" />
+					</hbox>
+				</groupbox>
+				<groupbox>
+					<caption label="&roomybookmarkstoolbar.options.spacingGroup.label;" />
+					<radiogroup preference="spacing" orient="horizontal">
+						<radio id="spacing0" value="0" label="&roomybookmarkstoolbar.options.spacing0.label;" />
+						<radio id="spacing1" value="1" label="&roomybookmarkstoolbar.options.spacing1.label;" />
+						<radio id="spacing2" value="2" label="&roomybookmarkstoolbar.options.spacing2.label;" />
+						<radio id="spacing3" value="3" label="&roomybookmarkstoolbar.options.spacing3.label;" />
+						<radio id="spacing3" value="4" label="&roomybookmarkstoolbar.options.spacing4.label;" />
+					</radiogroup>
+				</groupbox>
+				<groupbox>
+					<caption label="&roomybookmarkstoolbar.options.hideGroup.label;" />
+					<checkbox preference="hideBookmarksIcons" id="hideBookmarksIconsPerf" label="&roomybookmarkstoolbar.options.hideBookmarksIcon.label;" oncommand="roomybookmarkstoolbarOptions.showName();" />
+					<checkbox preference="hideFolderIcons" id="hideFolderIconsPerf" label="&roomybookmarkstoolbar.options.hideFolderIcon.label;" oncommand="roomybookmarkstoolbarOptions.showName();" />
+					<checkbox preference="hideDefaultIcons" id="hideDefaultIconsPerf" label="&roomybookmarkstoolbar.options.hideDefaultIcon.label;" oncommand="roomybookmarkstoolbarOptions.showName();" />
+				     	<checkbox preference="folderArrow" id="folderArrowPerf" label="&roomybookmarkstoolbar.options.folderArrow.label;" oncommand="roomybookmarkstoolbarOptions.OSFix();" disabled="true"/>
+				</groupbox>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+<button label="Problems? Contact with developer." oncommand="roomybookmarkstoolbarOptions.support();"/>
+ </prefpane>
+</prefwindow>

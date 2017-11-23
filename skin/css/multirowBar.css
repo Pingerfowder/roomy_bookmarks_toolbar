@@ -1,0 +1,32 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+@-moz-document url(chrome://browser/content/browser.xul), url(chrome://navigator/content/navigator.xul) {
+	#personal-bookmarks #PlacesToolbar {
+		display: block !important;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	#personal-bookmarks #PlacesToolbar #PlacesToolbarItems {
+		overflow-x: visible;
+		overflow-y: visible;
+		display: block !important;
+	}
+	#personal-bookmarks #PlacesToolbar #PlacesToolbarItems>box {
+		display: block;
+	}
+	#personal-bookmarks #PlacesToolbar #PlacesToolbarDropIndicator[collapsed="true"], #personal-bookmarks #PlacesToolbar #PlacesToolbarDropIndicator {
+		display: none;
+	}
+	#PlacesChevron{
+		display: none !important;
+	}
+	#personal-bookmarks {
+		display: block !important;
+	}
+	#personal-bookmarks #PlacesToolbar toolbarseparator {
+		position: relative !important;
+		top: 0px !important;
+		vertical-align: top !important;
+		display: inline-block !important;
+	}
+}
